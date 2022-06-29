@@ -146,32 +146,6 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "username",
-            "type": "string",
-            "description": "The player username"
-          },
-          {
-            "in": "query",
-            "name": "email",
-            "type": "string",
-            "description": "The player email"
-          },
-          {
-            "in": "query",
-            "name": "experience",
-            "type": "integer",
-            "description": "The player experience"
-          },
-          {
-            "in": "query",
-            "name": "lvl",
-            "type": "integer",
-            "description": "The player level"
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
