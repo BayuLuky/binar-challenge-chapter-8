@@ -70,9 +70,9 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "SUCCESS"
+                  "description": "success"
                 },
-                "message": {
+                "data": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -111,7 +111,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
@@ -127,7 +127,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
@@ -154,9 +154,9 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "SUCCESS"
+                  "description": "success"
                 },
-                "message": {
+                "data": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -232,9 +232,9 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "success"
                 },
-                "message": {
+                "data": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -266,6 +266,22 @@
               }
             }
           },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "string",
+                  "description": "failed"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Player with id=${id} not found"
+                }
+              }
+            }
+          },
           "500": {
             "description": "Internal Server Error",
             "schema": {
@@ -273,7 +289,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
@@ -334,7 +350,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "SUCCESS"
+                  "description": "success"
                 },
                 "message": {
                   "type": "string",
@@ -350,11 +366,27 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAIED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
-                  "description": "Cannot update Player with id={id}. Maybe Player was not found or req.body is empty!"
+                  "description": "Cannot update Player with id={id}"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "string",
+                  "description": "failed"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Player with id=${id} not found"
                 }
               }
             }
@@ -366,7 +398,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
@@ -402,7 +434,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "SUCCESS"
+                  "description": "success"
                 },
                 "message": {
                   "type": "string",
@@ -418,11 +450,11 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
-                  "description": "Cannot delete Player with id={id}. Maybe Player was not found!"
+                  "description": "Cannot delete Player with id={id}"
                 }
               }
             }
@@ -434,7 +466,7 @@
               "properties": {
                 "result": {
                   "type": "string",
-                  "description": "FAILED"
+                  "description": "failed"
                 },
                 "message": {
                   "type": "string",
@@ -451,7 +483,7 @@
         "tags": [
           "API Documentation"
         ],
-        "summary": "Add experience to players",
+        "summary": "Add experience to player",
         "consumes": [
           "application/json"
         ],
